@@ -1,0 +1,21 @@
+
+<body>
+
+  <input type="text" id="myInput" (input)="applyFilter($event)" placeholder="Search Art(name/artistName)">
+
+  <div class="container">
+    <div *ngFor="let imageCard of foundedimageCards" class="card" routerLink="/image-card-details/{{imageCard.id}}">
+      <div class="img-wrap">
+        <img class="single-image"  src="{{imageCard.imageUrl}}" alt="imageCard.imageUrl">
+      </div>
+
+      <h2>{{imageCard.imageName}}</h2>
+      <p>{{imageCard.artistName}}</p>
+      <p>{{imageCard.description}}</p>
+    </div>
+  </div>
+</body>
+<div style="text-align: center;" class="notFound" *ngIf="showNotFound">
+  <h1>No Arts found...</h1>
+
+</div>

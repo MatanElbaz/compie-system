@@ -1,0 +1,17 @@
+<body *ngIf="imageCard" layout="row">
+  <div class="split left">
+    <h4 style="position: absolute ;cursor: pointer;" routerLink="/home" routerLinkActive="active" >-back</h4>
+      <div class="image-card-details">
+        <h1 class="imageName">{{imageCard?.imageName}}</h1>
+        <p>{{imageCard?.artistName}}</p>
+        <hr class="h-hr">
+        <img src="{{imageCard?.imageUrl}}" alt="">
+      </div>
+  </div>
+
+  <div class="split-chat right">
+    <div class="centered-2">
+      <app-chat imageCardId={{imageCard?.id}}></app-chat>
+    </div>
+  </div>
+</body>

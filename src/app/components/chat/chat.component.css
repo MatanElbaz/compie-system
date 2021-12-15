@@ -1,0 +1,15 @@
+.chat {
+  margin-top: 70px;
+  border-style: double;
+  width: 530px;
+}
+
+.chat-content {
+  border-radius: .25rem;
+  height: 40rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  height: 590px;
+}
